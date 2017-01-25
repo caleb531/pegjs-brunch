@@ -6,6 +6,8 @@ class PegJsPlugin {
 
   constructor(config) {
     this.config = config.plugins.pegjs;
+    // The output of the below peg.generate() function must be a string, not an
+    // object
     this.config.output = 'source';
   }
 
