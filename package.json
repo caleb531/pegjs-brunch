@@ -1,6 +1,6 @@
 {
   "name": "pegjs-brunch",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A generic PEG.js plugin for Brunch",
   "main": "index.js",
   "scripts": {
