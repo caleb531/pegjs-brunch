@@ -32,5 +32,7 @@ PegJsPlugin.prototype.brunchPlugin = true;
 PegJsPlugin.prototype.type = 'javascript';
 // The extension for files to process
 PegJsPlugin.prototype.extension = 'pegjs';
+// The extension for processed files (this allows for compiler chaining)
+PegJsPlugin.prototype.targetExtension = 'js';
 
 module.exports = PegJsPlugin;
