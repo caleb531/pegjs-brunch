@@ -1,6 +1,6 @@
 'use strict';
 
-var peg = require('pegjs');
+const peg = require('pegjs');
 
 class PegJsPlugin {
 
@@ -12,7 +12,7 @@ class PegJsPlugin {
   }
 
   compile(file) {
-    var parser;
+    let parser;
     try {
       parser = peg.generate(file.data, this.config);
     } catch(error) {
