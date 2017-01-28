@@ -12,16 +12,15 @@ class PegJsPlugin {
   }
 
   compile(file) {
-    let parser;
     try {
-      parser = peg.generate(file.data, this.config);
+      const parser = peg.generate(file.data, this.config);
+      return Promise.resolve({data: parser});
     } catch(error) {
       if (error instanceof peg.parser.SyntaxError) {
         error.message = `${error.message} at ${error.location.start.line}:${error.location.start.column}`;
       }
       return Promise.reject(error);
     }
-    return Promise.resolve({data: parser});
   }
 
 }
