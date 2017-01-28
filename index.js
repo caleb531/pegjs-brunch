@@ -29,8 +29,8 @@ class PegJsPlugin {
 // brunchPlugin must be set to true for all Brunch plugins
 PegJsPlugin.prototype.brunchPlugin = true;
 // The type of file to generate
-PegJsPlugin.prototype.type = "javascript";
+PegJsPlugin.prototype.type = 'javascript';
 // The extension for files to process
-PegJsPlugin.prototype.extension = "pegjs";
+PegJsPlugin.prototype.extension = 'pegjs';
 
 module.exports = PegJsPlugin;
