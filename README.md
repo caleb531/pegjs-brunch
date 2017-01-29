@@ -42,7 +42,7 @@ module.exports = {
   // ...
   javascripts: {
     joinTo: {
-      'main.js': ['app/scripts/*.pegjs', 'app/scripts/*.js', /^node_modules/];
+      'main.js': ['app/scripts/*.pegjs', 'app/scripts/*.js', /^node_modules/]
     }
   }
   // ...
