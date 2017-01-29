@@ -10,6 +10,11 @@ describe('pegjs-brunch', function () {
     expect(plugin).to.be.ok;
   });
 
+  it('should initialize with empty brunch config', function () {
+    const plugin = new Plugin({});
+    expect(plugin).to.be.ok;
+  });
+
   it('should initialize with empty plugins config', function () {
     const plugin = new Plugin({plugins: {}});
     expect(plugin).to.be.ok;
