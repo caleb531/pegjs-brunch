@@ -4,7 +4,7 @@
   "description": "A generic PEG.js plugin for Brunch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "homepage": "https://github.com/caleb531/pegjs-brunch#readme",
   "dependencies": {
     "pegjs": "^0.10.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }
