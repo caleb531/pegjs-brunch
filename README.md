@@ -5,7 +5,7 @@
 
 [![Build Status](https://travis-ci.org/caleb531/pegjs-brunch.svg?branch=master)](https://travis-ci.org/caleb531/pegjs-brunch)
 
-This plugin adds [PegJS](https://pegjs.org/) support to
+This plugin adds [PEG.js](https://pegjs.org/) support to
 [Brunch](http://brunch.io/).
 
 ## Usage
