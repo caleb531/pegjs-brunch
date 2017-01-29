@@ -44,7 +44,7 @@ describe('pegjs-brunch', function () {
     .catch(done);
   });
 
-  it('should provide error message for invalid grammar', function(done) {
+  it('should provide line no./column for invalid grammar', function(done) {
     const data = 'blahblah';
     const plugin = new Plugin();
     plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
