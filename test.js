@@ -57,7 +57,7 @@ describe('pegjs-brunch', function () {
   });
 
   it('should generate parser as string regardless of config', function(done) {
-    const data = 'Integer\n\t= \'-\'\n\t[1-9][0-9]*';
+    const data = 'Integer\n\t= \'-\'?[1-9][0-9]*';
     const plugin = new Plugin({
       plugins: {pegjs: {output: 'parser'}}
     });
@@ -69,7 +69,7 @@ describe('pegjs-brunch', function () {
   });
 
   it('should pass other options to parser', function(done) {
-    const data = 'Integer\n\t= \'-\'\n\t[1-9][0-9]*';
+    const data = 'Integer\n\t= \'-\'?[1-9][0-9]*';
     const plugin = new Plugin({
       plugins: {pegjs: {format: 'globals', exportVar: 'foo'}}
     });
