@@ -5,7 +5,11 @@ const peg = require('pegjs');
 class PegJsPlugin {
 
   constructor(config) {
-    this.config = config.plugins.pegjs;
+    if (config && config.plugins && config.plugins.pegjs) {
+      this.config = config.plugins.pegjs;
+    } else {
+      this.config = {};
+    }
     // The output of the below peg.generate() function must be a string, not an
     // object
     this.config.output = 'source';
@@ -17,7 +21,7 @@ class PegJsPlugin {
       return Promise.resolve({data: parser});
     } catch(error) {
       if (error instanceof peg.parser.SyntaxError) {
-        error.message = `${error.message} at ${error.location.start.line}:${error.location.start.column}`;
+        error.message = `${error.message} (${error.location.start.line}:${error.location.start.column})`;
       }
       return Promise.reject(error);
     }
