@@ -3,6 +3,8 @@
 *Copyright 2017, Caleb Evans*  
 *Released under the MIT License*
 
+[![Build Status](https://travis-ci.org/caleb531/pegjs-brunch.svg?branch=master)](https://travis-ci.org/caleb531/pegjs-brunch)
+
 This plugin adds PegJS support to [Brunch](http://brunch.io/).
 
 ## Usage
