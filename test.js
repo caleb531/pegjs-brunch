@@ -25,7 +25,7 @@ describe('pegjs-brunch', function () {
     expect(plugin).to.be.ok;
   });
 
-  it('should generate parser from valid grammar', function(done) {
+  it('should generate parser from valid grammar', function (done) {
     const data = 'Integer\n\t= \'-\'\n\t[1-9][0-9]*';
     const plugin = new Plugin({
       plugins: {pegjs: {output: 'source'}}
@@ -37,7 +37,7 @@ describe('pegjs-brunch', function () {
     .catch(done);
   });
 
-  it('should throw error for invalid grammar', function(done) {
+  it('should throw error for invalid grammar', function (done) {
     const data = 'blahblah';
     const plugin = new Plugin();
     plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
@@ -49,7 +49,7 @@ describe('pegjs-brunch', function () {
     .catch(done);
   });
 
-  it('should provide line no./column for invalid grammar', function(done) {
+  it('should provide line no./column for invalid grammar', function (done) {
     const data = 'blahblah';
     const plugin = new Plugin();
     plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
@@ -61,7 +61,7 @@ describe('pegjs-brunch', function () {
     .catch(done);
   });
 
-  it('should generate parser as string regardless of config', function(done) {
+  it('should generate parser as string regardless of config', function (done) {
     const data = 'Integer\n\t= \'-\'?[1-9][0-9]*';
     const plugin = new Plugin({
       plugins: {pegjs: {output: 'parser'}}
@@ -73,7 +73,7 @@ describe('pegjs-brunch', function () {
     .catch(done);
   });
 
-  it('should pass other options to parser', function(done) {
+  it('should pass other options to parser', function (done) {
     const data = 'Integer\n\t= \'-\'?[1-9][0-9]*';
     const plugin = new Plugin({
       plugins: {pegjs: {format: 'globals', exportVar: 'foo'}}
@@ -86,19 +86,19 @@ describe('pegjs-brunch', function () {
     .catch(done);
   });
 
-  it('should be registered as Brunch plugin', function() {
+  it('should be registered as Brunch plugin', function () {
     expect(Plugin.prototype.brunchPlugin).to.be.true;
   });
 
-  it('should generate JavaScript files', function() {
+  it('should generate JavaScript files', function () {
     expect(Plugin.prototype.type).to.equal('javascript');
   });
 
-  it('should process PEG.js grammars', function() {
+  it('should process PEG.js grammars', function () {
     expect(Plugin.prototype.extension).to.equal('pegjs');
   });
 
-  it('should enable processor chaining', function() {
+  it('should enable processor chaining', function () {
     expect(Plugin.prototype.targetExtension).to.equal('js');
   });
 

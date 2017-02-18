@@ -19,7 +19,7 @@ class PegJsPlugin {
     try {
       const parser = peg.generate(file.data, this.config);
       return Promise.resolve({data: parser});
-    } catch(error) {
+    } catch (error) {
       if (error instanceof peg.parser.SyntaxError) {
         error.message = `${error.message} (${error.location.start.line}:${error.location.start.column})`;
       }
