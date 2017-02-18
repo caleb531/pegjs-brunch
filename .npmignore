@@ -1,3 +1,4 @@
 .editorconfig
+.eslintrc.js
 .travis.yml
 test.js
