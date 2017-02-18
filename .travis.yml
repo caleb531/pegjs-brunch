@@ -7,5 +7,5 @@ node_js:
   - "5"
   - "4"
 script:
-  - npm run lint --silent
+  - npm run lint
   - npm test
