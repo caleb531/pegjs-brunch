@@ -1,7 +1,7 @@
 'use strict';
 
-const Plugin = require('.');
 const expect = require('chai').expect;
+const Plugin = require('.');
 
 describe('pegjs-brunch', function () {
 
