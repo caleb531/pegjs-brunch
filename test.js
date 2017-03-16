@@ -76,7 +76,7 @@ describe('pegjs-brunch', function () {
   it('should pass other options to parser', function (done) {
     const data = 'Integer\n\t= \'-\'?[1-9][0-9]*';
     const plugin = new Plugin({
-      plugins: {pegjs: {format: 'globals', exportVar: 'foo'}}
+      plugins: {pegjs: {format: 'globals', exportVar: 'foo', output: 'source'}}
     });
     plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
       expect(file.data).to.be.a('string');
