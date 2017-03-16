@@ -94,7 +94,7 @@ describe('pegjs-brunch', function () {
     expect(Plugin.prototype.type).to.equal('javascript');
   });
 
-  it('should process PEG.js grammars', function () {
+  it('should process PEG.js grammar files', function () {
     expect(Plugin.prototype.extension).to.equal('pegjs');
   });
 
