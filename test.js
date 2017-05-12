@@ -30,19 +30,19 @@ describe('pegjs-brunch', function () {
     const plugin = new Plugin({
       plugins: {pegjs: {output: 'source'}}
     });
-    plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
+    plugin.compile({data: data, path: 'file.pegjs'}).then((file) => {
       expect(file.data).to.be.a('string');
       done();
-    }, error => expect(error).not.to.be.ok)
+    }, (error) => expect(error).not.to.be.ok)
     .catch(done);
   });
 
   it('should throw error for invalid grammar', function (done) {
     const data = 'blahblah';
     const plugin = new Plugin();
-    plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
+    plugin.compile({data: data, path: 'file.pegjs'}).then((file) => {
       expect(file).not.to.be.ok;
-    }, error => {
+    }, (error) => {
       expect(error).to.be.ok;
       done();
     })
@@ -52,9 +52,9 @@ describe('pegjs-brunch', function () {
   it('should provide line no./column for invalid grammar', function (done) {
     const data = 'blahblah';
     const plugin = new Plugin();
-    plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
+    plugin.compile({data: data, path: 'file.pegjs'}).then((file) => {
       expect(file).not.to.be.ok;
-    }, error => {
+    }, (error) => {
       expect(error.message).to.match(/1:9/);
       done();
     })
@@ -66,10 +66,10 @@ describe('pegjs-brunch', function () {
     const plugin = new Plugin({
       plugins: {pegjs: {output: 'parser'}}
     });
-    plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
+    plugin.compile({data: data, path: 'file.pegjs'}).then((file) => {
       expect(file.data).to.be.a('string');
       done();
-    }, error => expect(error).not.to.be.ok)
+    }, (error) => expect(error).not.to.be.ok)
     .catch(done);
   });
 
@@ -78,11 +78,11 @@ describe('pegjs-brunch', function () {
     const plugin = new Plugin({
       plugins: {pegjs: {format: 'globals', exportVar: 'foo', output: 'source'}}
     });
-    plugin.compile({data: data, path: 'file.pegjs'}).then(file => {
+    plugin.compile({data: data, path: 'file.pegjs'}).then((file) => {
       expect(file.data).to.be.a('string');
       expect(file.data).to.match(/\bfoo\s*=\s*/);
       done();
-    }, error => expect(error).not.to.be.ok)
+    }, (error) => expect(error).not.to.be.ok)
     .catch(done);
   });
 
