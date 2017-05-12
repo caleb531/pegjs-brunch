@@ -20,6 +20,7 @@ class PegJsPlugin {
       const parser = peg.generate(file.data, this.config);
       return Promise.resolve({data: parser});
     } catch (error) {
+      // istanbul ignore else
       if (error instanceof peg.parser.SyntaxError) {
         error.message = `${error.message} (${error.location.start.line}:${error.location.start.column})`;
       }
