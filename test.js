@@ -33,8 +33,7 @@ describe('pegjs-brunch', function () {
     plugin.compile({data: data, path: 'file.pegjs'}).then((file) => {
       expect(file.data).to.be.a('string');
       done();
-    }, (error) => expect(error).not.to.be.ok)
-    .catch(done);
+    }).catch(done);
   });
 
   it('should throw error for invalid grammar', function (done) {
@@ -45,8 +44,7 @@ describe('pegjs-brunch', function () {
     }, (error) => {
       expect(error).to.be.ok;
       done();
-    })
-    .catch(done);
+    }).catch(done);
   });
 
   it('should provide line no./column for invalid grammar', function (done) {
@@ -57,8 +55,7 @@ describe('pegjs-brunch', function () {
     }, (error) => {
       expect(error.message).to.match(/1:9/);
       done();
-    })
-    .catch(done);
+    }).catch(done);
   });
 
   it('should generate parser as string regardless of config', function (done) {
@@ -69,8 +66,7 @@ describe('pegjs-brunch', function () {
     plugin.compile({data: data, path: 'file.pegjs'}).then((file) => {
       expect(file.data).to.be.a('string');
       done();
-    }, (error) => expect(error).not.to.be.ok)
-    .catch(done);
+    }).catch(done);
   });
 
   it('should pass other options to parser', function (done) {
@@ -82,8 +78,7 @@ describe('pegjs-brunch', function () {
       expect(file.data).to.be.a('string');
       expect(file.data).to.match(/\bfoo\s*=\s*/);
       done();
-    }, (error) => expect(error).not.to.be.ok)
-    .catch(done);
+    }).catch(done);
   });
 
   it('should be registered as Brunch plugin', function () {
