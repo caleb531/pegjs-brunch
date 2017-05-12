@@ -7,4 +7,6 @@ node_js:
   - "5"
 script:
   - npm run lint
-  - npm test
+  - npm run coverage
+after_success:
+  - nyc report --reporter=text-lcov | coveralls

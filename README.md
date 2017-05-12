@@ -4,6 +4,7 @@
 *Released under the MIT License*
 
 [![Build Status](https://travis-ci.org/caleb531/pegjs-brunch.svg?branch=master)](https://travis-ci.org/caleb531/pegjs-brunch)
+[![Coverage Status](https://coveralls.io/repos/github/caleb531/pegjs-brunch/badge.svg?branch=master)](https://coveralls.io/github/caleb531/pegjs-brunch?branch=master)
 
 This plugin adds [PEG.js](https://pegjs.org/) support to
 [Brunch](http://brunch.io/).

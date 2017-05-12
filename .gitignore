@@ -4,3 +4,7 @@
 # Node.js files
 node_modules
 *.log
+
+# Coverage data
+coverage
+.nyc_output
